@@ -1,0 +1,123 @@
+:root {
+    --primary-bg: #2c3e50;
+    --button-bg: #34495e;
+    --operation-bg: #e67e22;
+    --equals-bg: #27ae60;
+    --clear-bg: #c0392b;
+    --text-color: #ecf0f1;
+    --display-bg: #fff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --spacing: 10px;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background: var(--primary-bg);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.display-container {
+    margin-bottom: var(--spacing);
+}
+
+.history {
+    color: var(--text-color);
+    font-size: 1rem;
+    text-align: right;
+    padding: 5px;
+    opacity: 0.7;
+    min-height: 1.5rem;
+}
+
+.display {
+    background: var(--display-bg);
+    font-size: 2rem;
+    padding: var(--spacing);
+    text-align: right;
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing);
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--button-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background: lighten(var(--button-bg), 10%);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.number, .decimal {
+    background: var(--button-bg);
+}
+
+.operation {
+    background: var(--operation-bg);
+}
+
+.equals {
+    background: var(--equals-bg);
+    grid-column: 4 / 5;
+    grid-row: 3 / 6;
+}
+
+.clear {
+    background: var(--clear-bg);
+}
+
+.zero {
+    grid-column: 1 / 3;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .calculator {
+        max-width: 300px;
+    }
+
+    .display {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}

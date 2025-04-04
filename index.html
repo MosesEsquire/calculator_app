@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A dynamic calculator app built with HTML, CSS, and JavaScript.">
+    <title>Dynamic Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator" role="application" aria-label="Calculator">
+        <div class="display-container">
+            <div class="history" aria-live="polite"></div>
+            <div class="display" id="display" tabindex="0">0</div>
+        </div>
+        <div class="buttons">
+            <button class="clear" data-value="C" aria-label="Clear">C</button>
+            <button class="operation" data-value="/" aria-label="Divide">/</button>
+            <button class="operation" data-value="*" aria-label="Multiply">×</button>
+            <button class="operation" data-value="-" aria-label="Subtract">-</button>
+            <button class="number" data-value="7" aria-label="Seven">7</button>
+            <button class="number" data-value="8" aria-label="Eight">8</button>
+            <button class="number" data-value="9" aria-label="Nine">9</button>
+            <button class="operation" data-value="+" aria-label="Add">+</button>
+            <button class="number" data-value="4" aria-label="Four">4</button>
+            <button class="number" data-value="5" aria-label="Five">5</button>
+            <button class="number" data-value="6" aria-label="Six">6</button>
+            <button class="equals" data-value="=" aria-label="Equals">=</button>
+            <button class="number" data-value="1" aria-label="One">1</button>
+            <button class="number" data-value="2" aria-label="Two">2</button>
+            <button class="number" data-value="3" aria-label="Three">3</button>
+            <button class="number zero" data-value="0" aria-label="Zero">0</button>
+            <button class="decimal" data-value="." aria-label="Decimal">.</button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
