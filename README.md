@@ -43,7 +43,9 @@ calculator-app/
 6. **Maintainability**:
    - CSS variables and structured JS make updates straightforward.
 
----
+
+## Deployment
+View live at: https://mosesesquire.github.io/calculator_app/
 
 ### **How to Use**
 1. Create a folder (e.g., `calculator-app`).
